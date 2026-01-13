@@ -1,54 +1,24 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeFeatured from "../components/HomeFeatured.astro";
+import HomePostCard from "../components/HomePostCard.astro";
+import Sidebar from "../components/Sidebar.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
+<BaseLayout>
+  <section class="home-grid">
+    <div class="main-content">
+      <HomeFeatured />
 
-  <body>
-    <Header />
+      <div class="post-list">
+        <HomePostCard />
+        <HomePostCard />
+        <HomePostCard />
+      </div>
+    </div>
 
-    <main>
-      <section>
-        <h1>Engineering Notes on Cloud, DevOps & Security</h1>
-
-        <p>
-          This is a technical blog focused on real-world infrastructure,
-          cloud architecture, DevOps workflows, and security engineering.
-          The content here is based on hands-on experimentation, system design,
-          failures, and lessons learned while working with modern cloud-native systems.
-        </p>
-
-        <p>
-          Instead of tutorials written in isolation, this blog documents
-          <strong>how systems behave in practice</strong> — under load,
-          under attack, and under operational constraints.
-        </p>
-      </section>
-
-      <section>
-        <h2>What this blog covers</h2>
-        <ul>
-          <li>Cloud architecture (AWS-first)</li>
-          <li>Infrastructure as Code and DevOps workflows</li>
-          <li>Security experiments, honeypots, and threat analysis</li>
-          <li>System design trade-offs and postmortems</li>
-        </ul>
-      </section>
-
-      <section>
-        <p>
-          <a href="/blog">Read the blog →</a>
-        </p>
-      </section>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+    <aside class="sidebar">
+      <Sidebar />
+    </aside>
+  </section>
+</BaseLayout>
