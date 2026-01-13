@@ -7,18 +7,27 @@ import Sidebar from "../components/Sidebar.astro";
 
 <BaseLayout>
   <section class="home-grid">
-    <div class="main-content">
-      <HomeFeatured />
 
-      <div class="post-list">
-        <HomePostCard />
-        <HomePostCard />
-        <HomePostCard />
+    <!-- MAIN CONTENT AREA -->
+    <div class="main-content">
+      <div class="main-surface">
+        <!-- Featured Post -->
+        <HomeFeatured />
+
+        <!-- Other Posts -->
+        <div class="post-list">
+          <HomePostCard />
+          <HomePostCard />
+          <HomePostCard />
+          <HomePostCard />
+        </div>
       </div>
     </div>
 
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <Sidebar />
     </aside>
+
   </section>
 </BaseLayout>

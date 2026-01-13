@@ -1,11 +1,22 @@
-/*
-  Clean research-style layout
-  Single content surface, no section fragmentation
-*/
+:root {
+  /* Backgrounds */
+  --bg-page: #f6f5f2;
+  --bg-surface: #ffffff;
+  --bg-muted: #efeeea;
 
-/* =========================
-   COLOR SYSTEM
-   ========================= */
+  /* Text */
+  --text-primary: #1f2933;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+
+  /* Accent */
+  --accent-primary: #0f766e;
+  --accent-soft: #e6f2f1;
+
+  /* Borders */
+  --border-subtle: #e2e1dd;
+}
+
 :root {
   --bg-page: #f6f4ef;      /* light beige background */
   --bg-content: #ffffff;  /* single white paper */
@@ -181,4 +192,8 @@ main h2::before {
   content: "";
   display: block;
   height: 1.2rem;
+}
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
 }
